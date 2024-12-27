@@ -1,4 +1,4 @@
-# Instalação do WSL + Ubuntu
+# Atividade de Linux Compass UOL
 
 ### 1. Instalação do WSL
 
@@ -6,11 +6,11 @@ Abra o PowerShell como adminstrador e rode o seguinte comando:
 ```
 wsl --install
 ```
-### 2. Instalação do Linux
+### 2. Instalação da distribuição Linux
 
 ### Via Microsoft Store
-1. Pesquise por Ubuntu (ou outra distro de seu interesse)
-2. Clique na versão que deseja instalar e selecione **Obter** ou **Instalar**.
+1. Pesquise pela Distribuição desejada (Ubuntu por exemplo)
+2. instale a distribuição.
 3. Após a instalação, clique em **Iniciar** para abrir o Ubuntu.
 
 #### Após a instalação é necessário que você reinicie o computador para aplicar as mudanças
@@ -27,7 +27,7 @@ Este projeto implementa um sistema de monitoramento simples do serviço Nginx em
 - Sistema Linux com acesso ao `cron` (Baixe a biblioteca caso necessário)
 - Servidor Nginx instalado e rodando
 
-### 1. Instalação do Nginx
+### 1. Instalação do Nginx (Ubuntu)
 
 Instale o Nginx com o comando:
 
