@@ -10,7 +10,7 @@ wsl --install
 
 ### Via Microsoft Store
 1. Pesquise pela Distribuição desejada (Ubuntu por exemplo)
-2. instale a distribuição.
+2. instale a distribuição linux escolhida. Nesse caso usarei Ubuntu.
 3. Após a instalação, clique em **Iniciar** para abrir o Ubuntu.
 
 #### Após a instalação é necessário que você reinicie o computador para aplicar as mudanças
@@ -20,7 +20,7 @@ Com tudo pronto, basta digitar `wsl` dentro do PowerShell que seu linux irá ini
 
 # Monitoramento do serviço NGINX no Linux
 
-Este projeto implementa um sistema de monitoramento simples do serviço Nginx em um sistema Linux. O script verifica se o Nginx está rodando e gera logs separadamente para os casos em que o serviço está **online** ou **offline**. Além disso, o script é configurado para ser executado automaticamente a cada 5 minutos via `cron`.
+Este projeto implementa um sistema de monitoramento simples do serviço Nginx em um sistema Linux. O script verifica se o Nginx está rodando e gera logs separadamente para os casos em que o serviço está online ou offline. Além disso, o script é configurado para ser executado automaticamente a cada 5 minutos via `cron`.
 
 ## Requisitos
 
@@ -29,7 +29,7 @@ Este projeto implementa um sistema de monitoramento simples do serviço Nginx em
 
 ### 1. Instalação do Nginx (Ubuntu)
 
-Instale o Nginx com o comando:
+Instale o Nginx::
 
 ```bash
 sudo apt update
@@ -40,13 +40,13 @@ sudo apt install nginx
 Crie um script chamado `nginx_validate.sh` no diretório `/home/linux-compass/nginx_validate.sh` onde validará se o serviço `Nginx` está operante ou não.
 
 ### 3. Permissões do Script
-Garantindo que o script tenha permissão para excução:
+Garantindo que o script tenha permissão para execução:
 ```
 sudo chmod +x /home/linux-compass/nginx_validate.sh
 ```
 
-### 4. Configuração do Cron
-Para automatizar a execução do script a cada 5 minutos, utilizaremos o cron:
+### 4. Configuração de tarefas com Cron
+O Cron é o agendador de tarefas do Linux e com ele automatizaremos a execução do script:
 
 ```
 crontab -e
@@ -57,7 +57,7 @@ Com o crontab aberto, adicione a linha de comando:
 */5 * * * * /bin/bash /home/linux-compass/nginx_validate.sh
 ```
 
-Isso garante que o script seja executado a cada 5 minutos.
+Isso fará com que o script seja executado a cada 5 minutos.
 
 ### 5. Teste do Funcionamento
 **Testar o Log de ONLINE**
